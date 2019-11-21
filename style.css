@@ -15,6 +15,7 @@ div.soluzione{
     height: 100px;
     padding-left: 20px;
     padding-right: 20px;
+    
 }
 
 button
@@ -54,9 +55,7 @@ p{
     font-size: 15px;
 }
 p.quote{
-    color: rgb(59, 59, 59);
-    font-size: 14px;
-    font-family: "Roboto";
+    color: rgb(255, 255, 255);
     text-align: center; 
 }
 h1{
@@ -67,9 +66,29 @@ h3{
     margin-left: 10%;
     margin-right: 10%;
     font-size: 26px;
-    font-family: "Roboto"
+    font-family: "Roboto";
+    color: white;
+    margin-bottom: 10px
 }
 form{
     font-family: "Roboto";
     
 }
+div.intestazione{
+    background-color: rgb(255, 57, 100);
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -20px;
+    padding: 1px;
+    border-bottom: 20px  rgb(219, 57, 93) solid;
+}
+div.pie{
+    background-color: rgb(43, 43, 43);
+    margin-left: -10px;
+    margin-right: -20px;
+    margin-bottom: -8px;
+    padding: 10px 40px 10px 40px;
+    border-top: 20px  rgb(34, 34, 34) solid;
+}
+
+
