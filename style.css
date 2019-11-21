@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(252, 252, 252);
+}
+
+img
+{
+    max-width: 350px;
+    max-height: 200px;
+}
+div.container{
+    height: 200px;
+}
+div.soluzione{
+    margin-top: 20px;
+    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button
+{
+    height: 40px;
+    margin:10px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: "Roboto";
+    border: none;
+    border-radius: 20px;
+    padding: 0px 20px 0px 20px;
+}
+button.spoiler{
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
+button.random{
+    background-color: rgb(30, 144, 210);
+    color: white
+}
+
+div.center{
+    position: relative;
+    text-align: center;
+    align-content: center;
+}
+div.line{
+    margin-left: 20%;
+    margin-right: 20%;
+    align-self: center;
+    height: 1px;
+    border-bottom: 2px rgb(151, 151, 151) solid;
+}
+p{
+    font-family: "Roboto";
+    font-size: 15px;
+}
+p.quote{
+    color: rgb(59, 59, 59);
+    font-size: 14px;
+    font-family: "Roboto";
+    text-align: center; 
+}
+h1{
+    font-family: "Roboto"
+}
+h3{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 26px;
+    font-family: "Roboto"
+}
+form{
+    font-family: "Roboto";
+    
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Immagini per storia</title>
+    <script src="script.js">    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Generatore randomico di immagini per Storia</h3>
+ 
+    <br><div class="line"></div><br>
+<div class="center">
+    
+
+    <h1>Archittettura</h1>
+    <!-- <button onclick="document.getElementById('spoilerformArch').hidden= false">Selezione avanzata</button><br>
+    <form name="formArch" id="spoilerformArch" hidden="true">
+        <input type="checkbox" value="storicismi"> Storicismi
+        <input type="checkbox" value="citta_industriali"> Città industriali 
+        <input type="checkbox" value="ferro_e_vetro"> Ferro e Vetro
+        <input type="checkbox" value="arts_and_craft"> Art and Craft 
+        <input type="checkbox" value="nuovo_mondo"> Nuovo Mondo
+        <input type="checkbox" value="scuola_di_chicago"> Scuola di Chicago 
+        <input type="checkbox" value="art_nouveau"> Art Nouveau
+    </form> -->
+    <div class="container">
+        <img class="img" id="imgArch">
+    </div>
+    <br>
+    <button id="archRandom" class="random" onclick=archFunction()>Inizia</button>  
+    <button id="archButtonSpoiler" hidden="true" class="center spoiler" onclick=archFunctionSpoiler()>Soluzione</button>
+    <br><br>
+    <div class="soluzione">
+        <p id="spoilerArch"></p>  
+        <br>
+    </div>
+
+    <br><div class="line"></div><br>
+
+    <h1>Design</h1>
+    <div class="container">
+        <img class=image id="imgDes" >
+    </div>
+    <br>
+    <button id="desRandom" class="random" onclick=desFunction()>Inizia</button> 
+    <button id="desButtonSpoiler" hidden="true" class="spoiler" onclick=desFunctionSpoiler()>Soluzione</button>
+    <br><br>
+    <div class="soluzione">
+        <p id="spoilerDes"></p> 
+        <br> 
+    </div>
+    <br><div class="line"></div><br>
+
+    <h1>Grafica</h1>
+    <div class="container">    
+        <img class=image id="imgGraf" >
+    </div>
+    <br><br>
+    <button id="grafRandom" class="random"onclick=GrafFunction()>Inizia</button>  
+    <button id="grafButtonSpoiler" hidden="true" class="spoiler" onclick=GrafFunctionSpoiler()>Soluzione</button>
+    <br>
+    <div class="soluzione">
+        <p id="spoilerGraf"></p> 
+    </div>
+</div> 
+    <br><div class="line"></div><br>
+    <br>
+    
+    <p class="quote">Questa pagina è stata sviluppata da Domenico Scaletta.</p>
+    
+    <br>
+
+</body>
+</html>
