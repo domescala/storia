@@ -68,7 +68,8 @@ h3{
     font-size: 26px;
     font-family: "Roboto";
     color: white;
-    margin-bottom: 10px
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 form{
     font-family: "Roboto";
@@ -84,11 +85,10 @@ div.intestazione{
 }
 div.pie{
     background-color: rgb(43, 43, 43);
-    margin-left: -10px;
-    margin-right: -20px;
-    margin-bottom: -8px;
+    margin: 0px -20px 0px -10px;
     padding: 10px 40px 10px 40px;
     border-top: 20px  rgb(34, 34, 34) solid;
+    border-bottom: 20px   rgb(43, 43, 43) solid;
 }
 
 
