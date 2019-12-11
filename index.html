@@ -11,58 +11,59 @@
 </head>
 <body>
     
-    <div class="intestazione"> <h3>Generatore casuale di immagini per Storia</h3>
+    <div class="intestazione"> <h1>Generatore casuale di immagini per Storia</h1>
     </div>
     <br>
 <div class="center">
-    
 
-    <h1>Archittettura</h1>
+    <h3>Archittettura</h3>
     <div class="container">
         <img class="img" id="imgArch">
     </div>
     <br>
-    <button id="archRandom" class="random" onclick=archFunction()>Inizia</button>  
     <button id="archButtonSpoiler" hidden="true" class="center spoiler" onclick=archFunctionSpoiler()>Soluzione</button>
+    <button id="archRandom" class="random" onclick=archFunction() style="background-color: rgb(255, 111, 28)" >Inizia</button>
     <br><br>
     <div class="soluzione">
-        <p id="spoilerArch"></p>  
+        <p class="spoiler" id="spoilerArch"></p>  
         <br>
     </div>
 
     <br><div class="line"></div><br>
 
-    <h1>Design</h1>
+    <h3>Design</h3>
     <div class="container">
         <img class=image id="imgDes" >
     </div>
-    <br>
-    <button id="desRandom" class="random" onclick=desFunction()>Inizia</button> 
+    <br> 
     <button id="desButtonSpoiler" hidden="true" class="spoiler" onclick=desFunctionSpoiler()>Soluzione</button>
+    <button id="desRandom" class="random" onclick=desFunction() style="background-color: rgb(30, 210, 105)">Inizia</button>
     <br><br>
     <div  class="soluzione">
-        <p id="spoilerDes"></p> 
+        <p class="spoiler" id="spoilerDes"></p> 
         <br> 
     </div>
     <br><div class="line"></div><br>
 
-    <h1>Grafica</h1>
+    <h3>Grafica</h3>
     <div class="container">    
         <img class=image id="imgGraf" >
     </div>
-    <br><br>
-    <button id="grafRandom" class="random"onclick=GrafFunction()>Inizia</button>  
+    <br><br>  
     <button id="grafButtonSpoiler" hidden="true" class="spoiler" onclick=GrafFunctionSpoiler()>Soluzione</button>
+    <button id="grafRandom" class="random"onclick=GrafFunction() style="background-color: rgb(30, 144, 210)">Inizia</button>
     <br>
     <div class="soluzione">
-        <p id="spoilerGraf"></p> 
+        <p class="spoiler" id="spoilerGraf"></p> 
     </div>
 </div> 
 
     
     <div class="pie">
-    <p class="quote"><i>Questa pagina è stata sviluppata da Domenico Scaletta per un uso puramente didattico</i></p>
-    </div>
-
+    <p class="credit">Questa pagina è stata sviluppata da Domenico Scaletta per un uso puramente didattico</p>
+    <div class="line" style="border-bottom: 1px rgb(255, 255, 255) solid; margin: 15px"></div>
+    <a style="text-decoration: none;"  href="https://paypal.me/domescala"><p class="credit" style="font-size:18px; font-family: MMontserrat-Medium; margin-bottom: 5px">Sostieni questo duro lavoro con un'onesta donazione</p></a>
+</div>
 </body>
 </html>
+

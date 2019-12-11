@@ -737,7 +737,7 @@ function archFunctionSpoiler()
         document.getElementById("imgDes").src = "img/Des/" + imgDesLink[b];
         document.getElementById("desButtonSpoiler").hidden = false;
         document.getElementById("desRandom").innerHTML = "Nuova immagine";
-        document.getElementById("spoilerDes").innerHTML = "";        
+        document.getElementById("spoilerDes").innerHTML = "";      
     }
 function desFunctionSpoiler()
     {
@@ -751,6 +751,8 @@ function GrafFunction()
         document.getElementById("grafButtonSpoiler").hidden = false;
         document.getElementById("grafRandom").innerHTML = "Nuova immagine";
         document.getElementById("spoilerGraf").innerHTML = "";
+    
+        
     }
 function GrafFunctionSpoiler()
     {
