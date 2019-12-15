@@ -56,9 +56,13 @@ table {
 	border-spacing: 0;
 }
 /* --------- */
-
+html{
+    overflow-x: hidden; /* fix dello scroll orizzontale che compariva a caso(?) */
+}
 body{
     background-color: rgb(252, 252, 252);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 img{
@@ -114,7 +118,7 @@ p.credit{
 }
 p.spoiler{
     color: rgb(37, 37, 37);
-    font-size: 14px;
+    font-size: 18px;
     text-align: center; 
     font-family:   "MMontserrat-Light";
 }

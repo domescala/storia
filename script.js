@@ -715,39 +715,40 @@ var imgGrafLink =["1475-Marchio-William Caxton.jpg",
 "1960-63-monogramma e logotipo per Yves Saint-Laurent-Cassandre-Art Déco.png", 
 "1962-Composizione-Victor Vasarely-Gestaltpsychologie.jpg"];
 
-var a, b, c = 0;
-var citta_industriali, ferro_e_vetro, arts_and_craft, nuovo_mondo, scuola_di_chicago, art_nouveau;
+var a1, a2, a3 = 0;
 
 function archFunction()
     {      
-        a = Math.floor(Math.random() * imgArchLink.length);
-        document.getElementById("imgArch").src = "img/Arch/" + imgArchLink[a];
+        a1 = Math.floor(Math.random() * imgArchLink.length);
+        document.getElementById("imgArch").src = "img/Arch/" + imgArchLink[a1];
         document.getElementById("archButtonSpoiler").hidden = false;
         document.getElementById("archRandom").innerHTML = "Nuova immagine";
         document.getElementById("spoilerArch").innerHTML = "";
+        ;
     }
 function archFunctionSpoiler()
     {
-        document.getElementById("spoilerArch").innerHTML = imgArchLink[a].replace(".jpg", "");
+        document.getElementById("spoilerArch").innerHTML = imgArchLink[a1].replace(".jpg", "");
     }  
 
     function desFunction()
     {   
-        b = Math.floor(Math.random() * imgDesLink.length);
-        document.getElementById("imgDes").src = "img/Des/" + imgDesLink[b];
+        a2 = Math.floor(Math.random() * imgDesLink.length);
+        document.getElementById("imgDes").src = "img/Des/" + imgDesLink[a2];
         document.getElementById("desButtonSpoiler").hidden = false;
         document.getElementById("desRandom").innerHTML = "Nuova immagine";
         document.getElementById("spoilerDes").innerHTML = "";      
+        
     }
 function desFunctionSpoiler()
     {
-        document.getElementById("spoilerDes").innerHTML = imgDesLink[b].replace(".jpg", "");
+        document.getElementById("spoilerDes").innerHTML = imgDesLink[a2].replace(".jpg", "");
     }  
 
 function GrafFunction()
     {   
-        c = Math.floor(Math.random() * imgGrafLink.length);
-        document.getElementById("imgGraf").src = "img/Graf/" + imgGrafLink[c];
+        a3 = Math.floor(Math.random() * imgGrafLink.length);
+        document.getElementById("imgGraf").src = "img/Graf/" + imgGrafLink[a3];
         document.getElementById("grafButtonSpoiler").hidden = false;
         document.getElementById("grafRandom").innerHTML = "Nuova immagine";
         document.getElementById("spoilerGraf").innerHTML = "";
@@ -756,5 +757,5 @@ function GrafFunction()
     }
 function GrafFunctionSpoiler()
     {
-        document.getElementById("spoilerGraf").innerHTML = imgGrafLink[c].replace(".jpg", "");
+        document.getElementById("spoilerGraf").innerHTML = imgGrafLink[a3].replace(".jpg", "");
     }  
