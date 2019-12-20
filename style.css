@@ -1,17 +1,17 @@
 @font-face {
-    font-family: "MMontserrat-Thin";
+    font-family: "Montserrat-Thin";
     src: url("font/montserrat/Montserrat-Thin.otf") format("OpenType");
 }
 @font-face{
-    font-family: "MMontserrat-Light";
+    font-family: "Montserrat-Light";
     src: url("font/montserrat/Montserrat-Light.otf") format("OpenType");
 }
 @font-face{
-    font-family: "MMontserrat-Medium";
+    font-family: "Montserrat-Medium";
     src: url("font/montserrat/Montserrat-Medium.otf") format("OpenType");
 }
 @font-face{
-    font-family: "MMontserrat-ThinItalic";
+    font-family: "Montserrat-ThinItalic";
     src: url("font/montserrat/Montserrat-ThinItalic.otf") format("OpenType");
 }
 /* RESET CSS*/
@@ -22,8 +22,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -31,7 +30,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-    font-family: "Roboto";
+    font-family: "Montserrat-Medium";
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -53,7 +52,23 @@ q:before, q:after {
 }
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
+    border-spacing: 0;
+	padding: 0px;
+    text-align: left;
+     
+}
+td{
+    
+    font-family: "Montserrat-Light";
+    font-size:  18px;
+    padding: 5px 25px 5px 25px;
+    
+    /* border-left: 2px rgb(57, 69, 77) solid; */
+    /* border-right: 2px rgb(143, 145, 255) solid; */
+    
+}
+tr{
+    /* border-left: 4px rgb(30, 144, 210) solid; */
 }
 /* --------- */
 html{
@@ -68,13 +83,6 @@ body{
 img{
     max-width: 350px;
     max-height: 200px;}
-div.container{
-    height: 200px;}
-div.soluzione{
-    margin-top: 20px;
-    height: 100px;
-    padding-left: 40px;
-    padding-right: 40px; }
 
 button{
     height: 40px;
@@ -85,7 +93,7 @@ button{
     border-radius: 20px;
     padding: 0px 20px 0px 20px;
     outline: none;
-    font-family:  "MMontserrat-Medium";
+    font-family:  "Montserrat-Medium";
 }
 button.spoiler{
     color: rgb(37, 37, 37);
@@ -93,7 +101,11 @@ button.spoiler{
     border: 2px rgb(37, 37, 37) solid;
 }
 button.random{
-    /* background-color: rgb(255, 57, 100); */
+    background-color: rgb(255, 57, 100);
+    color: white;
+}
+button.random2{
+    background-color: rgb(30, 144, 210);
     color: white;
 }
 
@@ -105,25 +117,69 @@ div.center{
 div.line{
     margin-left: 20%;
     margin-right: 20%;
+    margin-top: 30px;
     align-self: center;
     height: 1px;
     border-bottom: 2px rgb(151, 151, 151) solid;
+}
+div.intestazione{
+    background-color: rgb(255, 57, 100);
+    padding: 1px;
+    border-bottom: 20px  rgb(219, 57, 93) solid;
+}
+div.intestazione2{
+    background-color: rgb(88, 174, 224);
+    padding: 1px;
+    border-bottom: 20px  rgb(74, 147, 189) solid;
+}
+div.pie{
+    background-color: rgb(43, 43, 43);
+    margin: 0px -20px 0px -10px;
+    padding: 10px 40px 10px 40px;
+    border-top: 20px  rgb(34, 34, 34) solid;
+    border-bottom: 20px   rgb(43, 43, 43) solid;
+}
+div.container{
+    height: 200px;}
+div.soluzione2{
+    border-left: 5px rgb(53, 53, 53) solid;
+    background-color: rgb(255, 240, 175);
+    /* margin-left: 40px;
+    margin-right: 40px;  */
+    margin: 30px auto 30px auto ;
+    padding: 10px 0px 10px 0px;
+    width: 70%;
+    text-align: left;
+}
+div.soluzione{
+
+    /* margin-left: 40px;
+    margin-right: 40px;  */
+    margin: 30px auto 30px auto ;
+    padding: 10px 0px 10px 0px;
+    width: 70%;
+    text-align: left;
+    height: 40px;
 }
 
 p.credit{
     color: rgb(255, 255, 255);
     font-size: 14px;
     text-align: center; 
-    font-family: "MMontserrat-ThinItalic";
+    font-family: "Montserrat-ThinItalic";
 }
 p.spoiler{
     color: rgb(37, 37, 37);
     font-size: 18px;
     text-align: center; 
-    font-family:   "MMontserrat-Light";
+    font-family:   "Montserrat-Light";
+}
+p.spoiler-tab{
+    text-align: center;
+    font-family: "Montserrat-Light";
 }
 h3{
-    font-family: "MMontserrat-Light", "Roboto";
+    font-family: "Montserrat-Light", "Roboto";
     font-size: 32px;
     margin-bottom: 30px;
     margin-top: 20px;
@@ -134,24 +190,8 @@ h1{
     margin-left: 10%;
     margin-right: 10%;
     font-size: 26px;
-    font-family: "MMontserrat-Thin";
+    font-family: "Montserrat-Thin";
     color: white;
     margin-bottom: 20px;
     margin-top: 20px;
-}
-div.intestazione{
-    background-color: rgb(255, 57, 100);
-    /* margin-top: -8px;
-    margin-left: -10px;
-    margin-right: -20px;*/
-    /* Diventa inutile con il reset*/ 
-    padding: 1px;
-    border-bottom: 20px  rgb(219, 57, 93) solid;
-}
-div.pie{
-    background-color: rgb(43, 43, 43);
-    margin: 0px -20px 0px -10px;
-    padding: 10px 40px 10px 40px;
-    border-top: 20px  rgb(34, 34, 34) solid;
-    border-bottom: 20px   rgb(43, 43, 43) solid;
 }

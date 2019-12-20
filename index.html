@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,64 +12,78 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#ff3964">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Immagini per storia</title>
-    <script src="script.js">    </script>
+    <script src="script_storia1.js">    </script>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
+
 <body>
-    
-    <div class="intestazione"> <h1>Generatore casuale di immagini per Storia 1</h1>
+
+    <div class="intestazione">
+        <h1>Generatore casuale di immagini per Storia 2</h1>
     </div>
-    <br>
-<div class="center">
-    <h3>Archittettura</h3>
-    <div class="container">
-        <img class="img" id="imgArch">
-    </div>
-    <br>
-    <button id="archButtonSpoiler" hidden="true" class="center spoiler" onclick=archFunctionSpoiler()>Soluzione</button>
-    <button id="archRandom" class="random" onclick=archFunction() style="background-color: rgb(255, 111, 28)" >Inizia</button>
-    <br><br>
-    <div class="soluzione">
-        <p class="spoiler" id="spoilerArch"></p>  
+
+
+    <div class="center">
+        <a href="inprogress.html"><button>Passa a storia 2</button></a>
         <br>
-    </div>
+        <h3>Archittettura</h3>
+        <div class="container">
+            <img class="img" id="imgArch">
+        </div>
+        <br>
 
-    <br><div class="line"></div><br>
+        <button id="archButtonSpoiler" hidden="true" class="center spoiler" onclick=archFunctionSpoiler()>Soluzione</button>
+        <button id="archRandom" class="random" onclick=archFunction()>Inizia</button>
+        <div class="soluzione" >
+            <p class="spoiler" id="spoilerArch"></p>
+        </div>
+        <br>
 
-    <h3>Design</h3>
-    <div class="container">
-        <img class=image id="imgDes" >
-    </div>
-    <br> 
-    <button id="desButtonSpoiler" hidden="true" class="spoiler" onclick=desFunctionSpoiler()>Soluzione</button>
-    <button id="desRandom" class="random" onclick=desFunction() style="background-color: rgb(30, 210, 105)">Inizia</button>
-    <br><br>
-    <div  class="soluzione">
-        <p class="spoiler" id="spoilerDes"></p> 
-        <br> 
-    </div>
-    <br><div class="line"></div><br>
+        
+        <div class="line"></div><br>
 
-    <h3>Grafica</h3>
-    <div class="container">    
-        <img class=image id="imgGraf" >
+        <h3>Design</h3>
+        <div class="container">
+            <img class=image id="imgDes">
+        </div>
+        <br>
+        <button id="desButtonSpoiler" hidden="true" class="spoiler" onclick=desFunctionSpoiler()>Soluzione</button>
+        <button id="desRandom" class="random" onclick=desFunction()>Inizia</button>
+ 
+        <div class="soluzione">
+            <p class="spoiler" id="spoilerDes"></p>
+
+        </div>
+
+        <div class="line"></div><br>
+
+        <h3>Grafica</h3>
+        <div class="container">
+            <img class=image id="imgGraf">
+        </div>
+        <br>
+        <button id="grafButtonSpoiler" hidden="true" class="spoiler" onclick=GrafFunctionSpoiler()>Soluzione</button>
+        <button id="grafRandom" class="random" onclick=GrafFunction()>Inizia</button>
+   
+        <div class="soluzione" >
+            <p class="spoiler" id="spoilerGraf"></p>
+        </div>
+        <div class="line"></div><br>
     </div>
-    <br><br>  
-    <button id="grafButtonSpoiler" hidden="true" class="spoiler" onclick=GrafFunctionSpoiler()>Soluzione</button>
-    <button id="grafRandom" class="random"onclick=GrafFunction() style="background-color: rgb(30, 144, 210)">Inizia</button>
     <br>
-    <div class="soluzione">
-        <p class="spoiler" id="spoilerGraf"></p> 
-    </div>
-</div> 
 
-    
+
     <div class="pie">
-    <p class="credit">Questa pagina è stata sviluppata da Domenico Scaletta per un uso puramente didattico</p>
+        <p class="credit">Questa pagina è stata sviluppata da Domenico Scaletta per un uso puramente didattico</p>
 
-    <div class="line" style="border-bottom: 1px rgb(255, 255, 255) solid; margin: 15px"></div>
-    <a style="text-decoration: none;"  href="https://paypal.me/domescala"><p class="credit" style="font-size:18px; font-family: MMontserrat-Medium; margin-bottom: 5px">Sostieni questo duro lavoro con un'onesta donazione</p></a>
-</div>
+        <div class="line" style="border-bottom: 1px rgb(255, 255, 255) solid; margin: 15px"></div>
+        <a style="text-decoration: none;" href="https://paypal.me/domescala">
+            <p class="credit" style="font-size:18px; font-family: Montserrat-Medium; margin-bottom: 5px">Sostieni
+                questo duro lavoro con un'onesta donazione</p>
+        </a>
+        
+    </div>
 </body>
+
 </html>

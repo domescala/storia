@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#58aee0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#58aee0">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#58aee0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Immagini per storia 2</title>
+    <script src="script_storia2.js">    </script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="intestazione2">
+        <h1>Generatore casuale di immagini per Storia 2</h1>
+    </div>
+
+    <div class="center">
+        <a href="index.html"><button>Passa a storia 1</button></a>
+        <br>
+        
+<!-- Architettura -->
+
+        <h3>Archittettura</h3>
+        <div class="container">
+            <img class="img" id="imgArch">
+        </div>
+        <br>
+        <button id="archButtonSpoiler" hidden="true" class="center spoiler" onclick=archFunctionSpoiler()>Soluzione</button>
+        <button id="archRandom" class="random2" onclick=archFunction()>Inizia</button>
+        <br><br>
+        <div class="soluzione" id="spoilerArch-tab" hidden="true" >
+
+            <table >
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Data</p>
+                    </td>
+                    <td>
+                        <p id="DataArch"></p>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Autore</p>
+                    </td>
+                    <td>
+                        <p id="AutoreArch"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Opera</p>
+                    </td>
+                    <td>
+                        <p id="OperaArch"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Luogo</p>
+                    </td>
+                    <td>
+                        <p id="LuogoArch"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Contesto</p>
+                    </td>
+                    <td>
+                        <p id="ContestoArch"></p>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <br><br>
+        <div class="line"></div><br>
+
+
+<!-- Design -->
+
+        <h3>Design</h3>
+        <div class="container">
+            <img class=image id="imgDes">
+        </div>
+        <br>
+        <button id="desButtonSpoiler" hidden="true" class="spoiler" onclick=desFunctionSpoiler()>Soluzione</button>
+        <button id="desRandom" class="random2" onclick=desFunction()>Inizia</button>
+        <br><br>
+        <div class="soluzione" id="spoilerDes-tab" hidden="true">
+            <table >
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Data</p>
+                    </td>
+                    <td>
+                        <p id="DataDes">/</p>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Autore</p>
+                    </td>
+                    <td>
+                        <p id="AutoreDes">/</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Opera</p>
+                    </td>
+                    <td>
+                        <p id="OperaDes">/</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Luogo</p>
+                    </td>
+                    <td>
+                        <p id="LuogoDes">/</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Contesto</p>
+                    </td>
+                    <td>
+                        <p id="ContestoDes">/</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+
+        <br>
+
+        <br>
+        <div class="line"></div><br>
+
+
+<!-- grafica -->
+
+        <h3>Grafica</h3>
+        <div class="container">
+            <img class=image id="imgGraf">
+        </div>
+        <br><br>
+        <button id="grafButtonSpoiler" hidden="true" class="spoiler" onclick=grafFunctionSpoiler()>Soluzione</button>
+        <button id="grafRandom" class="random2" onclick=grafFunction()>Inizia</button>
+        <br><br>
+        <div class="soluzione" id="spoilerGraf-tab" hidden="true">
+            <table >
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Data</p>
+                    </td>
+                    <td>
+                        <p id="DataGraf">/</p>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Autore</p>
+                    </td>
+                    <td>
+                        <p id="AutoreGraf">/</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Opera</p>
+                    </td>
+                    <td>
+                        <p id="OperaGraf">/</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Luogo</p>
+                    </td>
+                    <td>
+                        <p id="LuogoGraf">/</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="spoiler-tab">Contesto</p>
+                    </td>
+                    <td>
+                        <p id="ContestoGraf">/</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+    </div>
+    <div class="pie">
+        <p class="credit">Questa pagina è stata sviluppata da Domenico Scaletta per un uso puramente didattico</p>
+
+        <div class="line" style="border-bottom: 1px rgb(255, 255, 255) solid; margin: 15px"></div>
+        <a style="text-decoration: none;" href="https://paypal.me/domescala">
+            <p class="credit" style="font-size:18px; font-family: Montserrat-Medium; margin-bottom: 5px">Sostieni
+                questo duro lavoro con un'onesta donazione</p>
+        </a>
+    </div>
+</body>
+
+</html>
