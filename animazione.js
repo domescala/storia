@@ -4,11 +4,14 @@ function animazione() {
     var speed = 100;
     var j = 0;
     var i = 1;
+
+var color = "#ffd37b";
+var nocolor = "#fcfcfc";
     scrittaOFF();
     function scrittaOFF() {
         i = 1;
         while (i < 18) {
-            document.getElementById("t" + i.toString()).style.fill = "#ffffff";
+            document.getElementById("t" + i.toString()).style.fill = nocolor;
             i = i + 1;
         }
     }
@@ -16,7 +19,7 @@ function animazione() {
     function puntiOFF() {
         i = 1;
         while (i < 4) {
-            document.getElementById("punto" + i.toString()).style.fill = "#ffffff";
+            document.getElementById("punto" + i.toString()).style.fill = nocolor;
             i = i + 1;
         }
     }
@@ -24,7 +27,7 @@ function animazione() {
     setTimeout(() => { scritta() }, 1500);
     function scritta() {
 
-        color = "#ffd37b";
+        
         if (i < 18) {
             document.getElementById("t" + i.toString()).style.fill = color;
             i++;
@@ -38,13 +41,13 @@ function animazione() {
 
     function punti()
         {
-            setTimeout(() => {document.getElementById("punto1").style.fill = "#ffd37b";    }, 0);
-            setTimeout(() => {document.getElementById("punto1").style.fill = "#ffffff";    }, 600);
-            setTimeout(() => {document.getElementById("punto2").style.fill = "#ffd37b";    }, 500);
+            setTimeout(() => {document.getElementById("punto1").style.fill = color;    }, 0);
+            setTimeout(() => {document.getElementById("punto1").style.fill = nocolor;    }, 600);
+            setTimeout(() => {document.getElementById("punto2").style.fill = color;    }, 500);
             
-            setTimeout(() => {document.getElementById("punto2").style.fill = "#ffffff";    }, 1100);
-        setTimeout(() => {document.getElementById("punto3").style.fill = "#ffd37b";   }, 1000);
-        setTimeout(() => {document.getElementById("punto3").style.fill = "#ffffff";    }, 1600);
+            setTimeout(() => {document.getElementById("punto2").style.fill = nocolor;    }, 1100);
+        setTimeout(() => {document.getElementById("punto3").style.fill = color;   }, 1000);
+        setTimeout(() => {document.getElementById("punto3").style.fill = nocolor;    }, 1600);
         i++;
         if (i < 7){setTimeout(() => {punti()    }, 1700)}        
             else{
