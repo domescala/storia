@@ -48,13 +48,14 @@ var nocolor = "#fcfcfc";
             setTimeout(() => {document.getElementById("punto2").style.fill = nocolor;    }, 1100);
         setTimeout(() => {document.getElementById("punto3").style.fill = color;   }, 1000);
         setTimeout(() => {document.getElementById("punto3").style.fill = nocolor;    }, 1600);
-        i++;
-        if (i < 7){setTimeout(() => {punti()    }, 1700)}        
-            else{
-                setTimeout(() => {animazione()
+        setTimeout(() => {punti()  }, 1601);
+        // i++;
+        // if (i < 7){setTimeout(() => {punti()    }, 1700)}        
+        //     else{
+        //         setTimeout(() => {animazione()
             
-                }, 1000);
-            }
+        //         }, 1000);
+        //     }
     }
         
         

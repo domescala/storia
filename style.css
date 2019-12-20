@@ -36,19 +36,28 @@
     width: 0;
     height: 0;
     color: rgba(0,0,0,0);
+    border-left: 2px rgb(41, 41, 41) solid;
+    
+
 }
 20%{
     height: 140px;
     width: 0;
+    border-left: 10px rgb(41, 41, 41) solid;
+    
 }
-80%{
+60%{
     width: 70%;
     color: rgba(0,0,0,0);
+    box-shadow: 0 0 0 0  rgba(0, 0, 0, 0);
 }
 
 
 100%{
     color: rgb(37, 37, 37);
+    border-left: 10px rgb(41, 41, 41) solid;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.171);
+    background-color: rgb(255, 240, 175);
 }
 }
 
@@ -104,13 +113,8 @@ td{
     font-size:  18px;
     padding: 5px 25px 5px 25px;
     
-    /* border-left: 2px rgb(57, 69, 77) solid; */
-    /* border-right: 2px rgb(143, 145, 255) solid; */
-    
 }
-tr{
-    /* border-left: 4px rgb(30, 144, 210) solid; */
-}
+
 /* --------- */
 html{
     overflow-x: hidden; /* fix dello scroll orizzontale che compariva a caso(?) */
@@ -172,8 +176,7 @@ div.intestazione2{
     background-color: rgb(88, 174, 224);
     padding: 1px;
     border-bottom: 20px  rgb(74, 147, 189) solid;
-    animation-name: intestazione-motion;
-    animation-duration: 1200ms;
+
 }
 div.pie{
     background-color: rgb(43, 43, 43);
@@ -189,16 +192,15 @@ div.soluzione2{
     background-color: rgb(255, 240, 175);
     animation-name: soluzione-motion;
     animation-duration: 1500ms;
-
+    
     margin: 30px auto 30px auto ;
     padding: 10px 0px 10px 0px;
     width: 70%;
     text-align: left;
+    animation-fill-mode: forwards;
 }
 div.soluzione{
 
-    /* margin-left: 40px;
-    margin-right: 40px;  */
     margin: 30px auto 30px auto ;
     padding: 10px 0px 10px 0px;
     width: 70%;
