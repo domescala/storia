@@ -14,21 +14,7 @@
     font-family: "Montserrat-ThinItalic";
     src: url("font/montserrat/Montserrat-ThinItalic.otf") format("OpenType");
 }
-@keyframes intestazione-motion{
-    0% {
-        height: 0;
-        color: rgba(0,0,0,0);
-        border-bottom: 0px  rgb(74, 147, 189) solid;
-    }
-    40%{
-        height: 92px;
-        color: "#ffffff";
-        border-bottom: 0px  rgb(74, 147, 189) solid;
-    }
-    100%{
-        border-bottom: 20px  rgb(74, 147, 189) solid;
-    }
-}
+
 
 /* animazione soluzione*/
 @keyframes soluzione-motion{
@@ -129,7 +115,16 @@ img{
     max-width: 350px;
     max-height: 200px;}
 
+ @keyframes opacity_on{
+     0%{
+         opacity: 0;
+     }
+     100%{
+         opacity: 1;
+     }
+ }   
 button{
+    opacity: 0;
     height: 40px;
     margin:10px;
     margin-top: 30px;
@@ -139,6 +134,8 @@ button{
     padding: 0px 20px 0px 20px;
     outline: none;
     font-family:  "Montserrat-Medium";
+    animation: opacity_on 1s ease-in 1s forwards;
+    
 }
 button.spoiler{
     color: rgb(37, 37, 37);
@@ -167,16 +164,117 @@ div.line{
     height: 1px;
     border-bottom: 2px rgb(151, 151, 151) solid;
 }
-div.intestazione{
-    background-color: rgb(255, 57, 100);
-    padding: 1px;
-    border-bottom: 20px  rgb(219, 57, 93) solid;
-}
-div.intestazione2{
-    background-color: rgb(88, 174, 224);
-    padding: 1px;
-    border-bottom: 20px  rgb(74, 147, 189) solid;
+@keyframes intro_intestazione1{
+    0%{     
+        background-color: rgb(0, 0, 0);
+        min-height: 100%;
+        padding-top: 50%;
+        color:  rgba(255, 255, 255, 0);
+        border-bottom: 0px  rgb(219, 57, 93) solid;
+    }
+    15%{
+        color: rgb(255, 255, 255);
+    }
+    40%{
+        background-color:  rgb(219, 57, 93) ;
+        min-height: 100%;
+        padding-top: 50%;
+    }
+    75%{
+        background-color: rgb(255, 57, 100);
+        padding-top: 20px;
+    }
+    85%{   
+        min-height: 54px;
+        padding-top: 20px;
+        color: rgb(255, 255, 255);
+        border-bottom: 0px  rgb(219, 57, 93) solid;
+    position: fixed;
 
+    }
+    100%{   
+        min-height: 54px;
+        padding-top: 20px;
+        color: rgb(255, 255, 255);
+        border-bottom: 20px  rgb(219, 57, 93) solid;
+    position: unset;
+        
+    }
+}
+@keyframes intro_intestazione2{
+    0%{     
+        background-color: rgb(0, 0, 0);
+        min-height: 100%;
+        padding-top: 50%;
+        color:  rgba(255, 255, 255, 0);
+        border-bottom: 0px  rgb(74, 147, 189) solid;
+    }
+    15%{
+        color: rgb(255, 255, 255);
+    }
+    40%{
+        background-color:  rgb(74, 147, 189) ;
+        min-height: 100%;
+        padding-top: 50%;
+    }
+    75%{
+        background-color: rgb(88, 174, 224);
+        padding-top: 20px;
+    }
+    85%{   
+        min-height: 54px;
+        padding-top: 20px;
+        color: rgb(255, 255, 255);
+        border-bottom: 0px  rgb(74, 147, 189) solid;
+        position: fixed;
+
+    }
+    100%{   
+        min-height: 54px;
+        padding-top: 20px;
+        color: rgb(255, 255, 255);
+        border-bottom: 20px  rgb(74, 147, 189) solid;
+        position: unset;
+
+    }
+}
+
+
+p.titolo{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 26px;
+    font-family: "Montserrat-Thin";
+    /* color: white; */
+    
+    
+}
+div.intestazione1{
+    min-height: 54px;
+    position: fixed;
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: rgb(255, 57, 100);
+    border-bottom: 20px  rgb(219, 57, 93) solid;
+    animation: intro_intestazione1 3s ease forwards;   
+}
+#div_corpo{
+    opacity: 0;
+    animation: opacity_on 1s ease forwards;
+}
+
+div.intestazione2{
+    min-height: 54px;
+    position: fixed;
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: rgb(88, 174, 224);
+    border-bottom: 20px  rgb(74, 147, 189) solid;
+    animation: intro_intestazione2 3s ease forwards;  
+    
 }
 div.pie{
     background-color: rgb(43, 43, 43);

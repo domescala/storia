@@ -717,7 +717,9 @@ var imgGrafLink =["1475-Marchio-William Caxton.jpg",
 "1962-Composizione-Victor Vasarely-Gestaltpsychologie.jpg"];
 
 var a1, a2, a3, i = 0;
+var tempo_intro = 3000;
 
+introduzione();
 
 function archFunction()
     {      
@@ -766,3 +768,8 @@ function GrafFunctionSpoiler()
         ;
         document.getElementById("spoilerGraf").innerHTML = imgGrafLink[a3].replace(".jpg", "");
     }  
+
+    function introduzione(){
+        div_corpo.hidden = true;
+        setTimeout(() => { div_corpo.hidden = false; }, tempo_intro);
+    }
