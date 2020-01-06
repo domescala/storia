@@ -6,7 +6,7 @@ function animazione() {
     var i = 1;
 
 var color = "#ffd37b";
-var nocolor = "#fcfcfc";
+var nocolor = "rgba(0,0,0,0)";
     scrittaOFF();
     function scrittaOFF() {
         i = 1;

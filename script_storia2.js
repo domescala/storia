@@ -8,7 +8,7 @@ var imgGrafLink = [
     "data- autore - opera - luogo, città - contesto .jpg"
 ];
 var a1, a2, a3, i = 0;
-var tempo_intro = 3000;
+var tempo_intro = 5000;
 
 function archFunction() {
     a1 = Math.floor(Math.random() * imgArchLink.length);
@@ -87,6 +87,5 @@ function grafFunctionSpoiler() {
     document.getElementById("ContestoGraf").innerHTML = wordspoiler[4].replace(".jpg", "");
 }
 function introduzione(){
-    div_corpo.hidden = true;
     setTimeout(() => { div_corpo.hidden = false; }, tempo_intro);
 }
