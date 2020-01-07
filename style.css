@@ -119,14 +119,43 @@ img{
      0%{
          opacity: 0;
      }
+     
      100%{
          opacity: 1;
      }
  }   
+ @keyframes traslazione_random{
+    0%{
+        color: rgba(255, 255, 255, 0);
+    }
+    81%{
+        margin-left: 10px;
+        color: rgba(255, 255, 255, 0);
+        width: 172px;
+    }
+    100%{
+        margin-left: 10px;
+        color: rgb(255, 255, 255);
+        width: 172px;
+    }
+}   
+@keyframes opacity_on_spoiler{
+    0%{
+        color: rgb(37, 37, 37, 0);
+        border: 2px rgba(37, 37, 37,0) solid;
+        
+    }
+    100%{
+
+        color: rgb(37, 37, 37);
+        border: 2px rgb(37, 37, 37) solid;
+
+    }}
+  
 button{
-    opacity: 0;
+    opacity: 1;
     height: 40px;
-    margin:10px;
+    margin-bottom:10px;
     margin-top: 30px;
     font-size: 15px;
     border: none;
@@ -134,19 +163,32 @@ button{
     padding: 0px 20px 0px 20px;
     outline: none;
     font-family:  "Montserrat-Medium";
-    animation: opacity_on 1s ease-in 1s forwards;
+    /* animation: opacity_on 1s ease-in 1s forwards; */
     
 }
 button.spoiler{
-    color: rgb(37, 37, 37);
-    background-color: rgb(37, 37, 37,0);
-    border: 2px rgb(37, 37, 37) solid;
+    width: 120px;
+    margin-right: 0px;
+    color: rgb(37, 37, 37, 0);
+    background-color: rgb(37, 37, 37, 0);
+    border: 2px rgba(37, 37, 37,0) solid;
+    /* animation: traslazione_spoiler 10s linear 1s  5s forwards; */
 }
 button.random{
+    z-index: 20;
+    width: 82px;
+    margin-left: -120px;
+    z-index: 5;
     background-color: rgb(255, 57, 100);
     color: white;
+    /* animation: traslazione_random 10s linear 5s; */
+    
 }
 button.random2{
+    z-index: 20;
+    width: 82px;
+    margin-left: -120px;
+    z-index: 5;
     background-color: rgb(30, 144, 210);
     color: white;
 }
@@ -166,6 +208,8 @@ div.line{
 }
 @keyframes intro_intestazione1{
     0%{     
+    position: fixed;
+
         background-color: rgb(0, 0, 0);
         min-height: 100%;
         padding-top: 50%;
@@ -203,6 +247,8 @@ div.line{
 }
 @keyframes intro_intestazione2{
     0%{     
+    position: fixed;
+
         background-color: rgb(0, 0, 0);
         min-height: 100%;
         padding-top: 50%;
@@ -246,35 +292,28 @@ p.titolo{
     margin-right: 10%;
     font-size: 26px;
     font-family: "Montserrat-Light";
-    /* color: white; */
-    
-    
 }
-div.intestazione1{
+.intestazione1, .intestazione2{
     min-height: 54px;
-    position: fixed;
+    min-width: 100%;
+    position: unset;
     color: rgb(255, 255, 255);
     padding-bottom: 20px;
     padding-top: 20px;
+}
+div.intestazione1{
     background-color: rgb(255, 57, 100);
     border-bottom: 20px  rgb(219, 57, 93) solid;
     animation: intro_intestazione1 3s ease forwards;   
 }
-#div_corpo{
-    opacity: 0;
-    animation: opacity_on 1s ease forwards;
-}
-
 div.intestazione2{
-    min-height: 54px;
-    position: fixed;
-    color: rgb(255, 255, 255);
-    padding-bottom: 20px;
-    padding-top: 20px;
     background-color: rgb(88, 174, 224);
     border-bottom: 20px  rgb(74, 147, 189) solid;
     animation: intro_intestazione2 3s ease forwards;  
-    
+}
+#div_corpo{
+    opacity: 0;
+    animation: opacity_on 1s ease forwards;
 }
 div.pie{
     background-color: rgb(43, 43, 43);
@@ -290,7 +329,6 @@ div.soluzione2{
     background-color: rgb(255, 240, 175);
     animation-name: soluzione-motion;
     animation-duration: 1500ms;
-    
     margin: 30px auto 30px auto ;
     padding: 10px 0px 10px 0px;
     width: 70%;
@@ -298,12 +336,12 @@ div.soluzione2{
     animation-fill-mode: forwards;
 }
 div.soluzione{
-
     margin: 30px auto 30px auto ;
     padding: 10px 0px 10px 0px;
     width: 70%;
     text-align: left;
     height: 40px;
+    animation: opacity_on 1s ease;
 }
 
 p.credit{

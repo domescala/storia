@@ -723,53 +723,151 @@ introduzione();
 
 function archFunction()
     {      
-        a1 = Math.floor(Math.random() * imgArchLink.length);
+        var materia = "Arch";
         
-        document.getElementById("imgArch").src = "img/Arch/" + imgArchLink[a1];
-        document.getElementById("archButtonSpoiler").hidden = false;
-        document.getElementById("archRandom").innerHTML = "Nuova immagine";
-        document.getElementById("spoilerArch").innerHTML = "";
-        ;
+        var img = "img"+materia;
+        var img_link = "img/"+materia+"/"
+        var spoiler_button = materia+"ButtonSpoiler";
+        var random_button = materia+"Random";
+        var spoiler_text = "spoiler"+materia ;
+        
+        
+        a1 = Math.floor(Math.random() * imgArchLink.length);
+        document.getElementById(img).src = img_link + imgArchLink[a1];
+        document.getElementById( spoiler_button ).style.animation = "opacity_on_spoiler 1s ease forwards";
+        
+        document.getElementById(spoiler_text).innerHTML = "";
+        document.getElementById(random_button).style.animation = "traslazione_random 1s ease forwards";
+        setTimeout(() => {document.getElementById(random_button).innerHTML = "Nuova immagine";         
+        }, 800);
+        animazione_manuale_random(random_button, 1000);
+        animazione_manuale_spoiler( spoiler_button , 1000);
+
     }
 function archFunctionSpoiler()
     {
+        document.getElementById("spoilerArch").hidden = true;
         
+        setTimeout(() => {
+        document.getElementById("spoilerArch").hidden = false;
+        document.getElementById("spoilerArch").style.animation = "opacity_on 1s";        
         document.getElementById("spoilerArch").innerHTML = imgArchLink[a1].replace(".jpg", "");
+            
+        }, 100);
     }  
         
         
     function desFunction()
     {   
-        a2 = Math.floor(Math.random() * imgDesLink.length);
-        document.getElementById("imgDes").src = "img/Des/" + imgDesLink[a2];
-        document.getElementById("desButtonSpoiler").hidden = false;
-        document.getElementById("desRandom").innerHTML = "Nuova immagine";
-        document.getElementById("spoilerDes").innerHTML = "";      
+        // a2 = Math.floor(Math.random() * imgDesLink.length);
+        // document.getElementById("imgDes").src = "img/Des/" + imgDesLink[a2];
+        // document.getElementById("desButtonSpoiler").hidden = false;
+        // document.getElementById("desRandom").innerHTML = "Nuova immagine";
+        // document.getElementById("spoilerDes").innerHTML = "";      
+        var materia = "Des";
         
+        var img = "img"+materia;
+        var img_link = "img/"+materia+"/"
+        var spoiler_button = materia+"ButtonSpoiler";
+        var random_button = materia+"Random";
+        var spoiler_text = "spoiler"+materia ;
+        
+        
+        a2 = Math.floor(Math.random() * imgDesLink.length);
+        document.getElementById(img).src = img_link + imgDesLink[a2];
+        document.getElementById( spoiler_button ).style.animation = "opacity_on_spoiler 1s ease forwards";
+        
+        document.getElementById(spoiler_text).innerHTML = "";
+        document.getElementById(random_button).style.animation = "traslazione_random 1s ease forwards";
+        setTimeout(() => {document.getElementById(random_button).innerHTML = "Nuova immagine";         
+        }, 800);
+        animazione_manuale_random(random_button, 1000);
+        animazione_manuale_spoiler( spoiler_button , 1000);
+
+
+
     }
 function desFunctionSpoiler()
     {
-        
+        document.getElementById("spoilerDes").hidden = true;
+        setTimeout(() => {
+        document.getElementById("spoilerDes").hidden = false;
+        document.getElementById("spoilerDes").style.animation = "opacity_on 1s";
         document.getElementById("spoilerDes").innerHTML = imgDesLink[a2].replace(".jpg", "");
+        }, 100);
     }  
 
 function GrafFunction()
     {   
+        // a3 = Math.floor(Math.random() * imgGrafLink.length);
+        // document.getElementById("imgGraf").src = "img/Graf/" + imgGrafLink[a3];
+        // document.getElementById("grafButtonSpoiler").hidden = false;
+        // document.getElementById("grafRandom").innerHTML = "Nuova immagine";
+        // document.getElementById("spoilerGraf").innerHTML = "";
+        var materia = "Graf";
+        
+        var img = "img"+materia;
+        var img_link = "img/"+materia+"/"
+        var spoiler_button = materia+"ButtonSpoiler";
+        var random_button = materia+"Random";
+        var spoiler_text = "spoiler"+materia ;
+        
+        
         a3 = Math.floor(Math.random() * imgGrafLink.length);
-        document.getElementById("imgGraf").src = "img/Graf/" + imgGrafLink[a3];
-        document.getElementById("grafButtonSpoiler").hidden = false;
-        document.getElementById("grafRandom").innerHTML = "Nuova immagine";
-        document.getElementById("spoilerGraf").innerHTML = "";
-    
+        document.getElementById(img).src = img_link + imgGrafLink[a3];
+        document.getElementById( spoiler_button ).style.animation = "opacity_on_spoiler 1s ease forwards";
+        
+        document.getElementById(spoiler_text).innerHTML = "";
+        document.getElementById(random_button).style.animation = "traslazione_random 1s ease forwards";
+        setTimeout(() => {document.getElementById(random_button).innerHTML = "Nuova immagine";         
+        }, 800);
+        animazione_manuale_random(random_button, 1000);
+        animazione_manuale_spoiler( spoiler_button , 1000);
+
+
         
     }
 function GrafFunctionSpoiler()
     {
-        ;
+        document.getElementById("spoilerGraf").hidden = true;
+        
+        setTimeout(() => {
+        document.getElementById("spoilerGraf").hidden = false;
+        document.getElementById("spoilerGraf").style.animation = "opacity_on 1s";        
         document.getElementById("spoilerGraf").innerHTML = imgGrafLink[a3].replace(".jpg", "");
+            
+        }, 100);
     }  
 
     function introduzione(){
-        div_corpo.hidden = true;
+        document.getElementById("div_corpo").hidden = true;
         setTimeout(() => { div_corpo.hidden = false; }, tempo_intro);
+        
+        setTimeout(() => { 
+            document.getElementById("div_corpo").style.opacity = "1";
+        }, tempo_intro + 100);
     }
+
+
+    function animazione_manuale_spoiler(nome_id, time){
+        time = time + 100;
+        setTimeout(() => {
+        document.getElementById(nome_id).style.color = "rgb(37, 37, 37)";
+        document.getElementById(nome_id).style.border = "2px rgb(37, 37, 37) solid";
+        }, time);
+    }
+    function animazione_manuale_random(nome_id, time){
+        time = time + 100;
+        setTimeout(() => {
+        document.getElementById(nome_id).style.marginLeft = "10px";
+        document.getElementById(nome_id).style.width = "172px";
+        }, time);
+    }
+        
+        function animazione_manuale_introduzione(){
+            setTimeout(() => { 
+                div_corpo.hidden = false; 
+                document.getElementById(div_corpo).style.opacity = "1";
+
+            }, tempo_intro);
+        }
