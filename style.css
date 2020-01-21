@@ -199,8 +199,8 @@ div.center{
     align-content: center;
 }
 div.line{
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 8%;
+    margin-right: 8%;
     margin-top: 30px;
     align-self: center;
     height: 1px;
@@ -284,9 +284,12 @@ div.line{
 
     }
 }
-
-
+p{
+    line-height: 18px;
+}
 p.titolo{
+    line-height: unset;
+
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
@@ -316,16 +319,14 @@ div.intestazione2{
     animation: opacity_on 1s ease forwards;
 }
 div.testo{
-    
     text-align: justify;
-    font-size: 12px;
+    font-size: 15px;
     color: rgb(70, 70, 70);
     background-color: rgb(255, 239, 188);
     margin: 20px;
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
     border-left: 5px   rgb(253, 217, 97) solid;
-
 }
 div.pie{
     background-color: rgb(43, 43, 43);
