@@ -23,18 +23,6 @@ function FunctionSpoiler() {
     document.getElementById("img").src = nome_foto_soluzione;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 function introduzione(){
     div_corpo.hidden = true;
     setTimeout(() => { div_corpo.hidden = false; }, tempo_intro);

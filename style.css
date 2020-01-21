@@ -47,7 +47,18 @@
 }
 }
 
-
+    div.testo{
+        opacity: 1;
+        text-align: justify;
+        font-size: 15px;
+        color: rgb(70, 70, 70);
+        background-color: rgb(255, 239, 188);
+        margin: 5%;
+        padding: 10px 10px 10px 10px;
+        border-radius: 5px;
+        border-left: 5px   rgb(253, 217, 97) solid;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.171);
+    }
 
 
 /* RESET CSS*/
@@ -318,16 +329,7 @@ div.intestazione2{
     opacity: 0;
     animation: opacity_on 1s ease forwards;
 }
-div.testo{
-    text-align: justify;
-    font-size: 15px;
-    color: rgb(70, 70, 70);
-    background-color: rgb(255, 239, 188);
-    margin: 20px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 5px;
-    border-left: 5px   rgb(253, 217, 97) solid;
-}
+
 div.pie{
     background-color: rgb(43, 43, 43);
     margin: 0px -20px 0px -10px;
