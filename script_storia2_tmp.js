@@ -10,11 +10,11 @@ function FunctionRandom() {
     src_foto = "storia2_tmp/Tavola disegno " + n + ".jpg";
     src_soluzione = "storia2_tmp/Tavola disegno " + n + " copia.jpg";
     img.hidden = true;    
+    document.getElementById("img").src = src_foto;
     setTimeout(() => {
         img.hidden = false;
         document.getElementById("img").style.animation = "opacity_on 0.75s ease forwards";
         
-        document.getElementById("img").src = src_foto;
     }, 100);
     document.getElementById("ButtonSpoiler").hidden = false;
     document.getElementById("Random").style.animation = "traslazione_random 1s ease forwards";
@@ -35,19 +35,19 @@ function FunctionSpoiler() {
 
     if (immagine == "foto") {
         img.hidden = true;
+        document.getElementById("img").src = src_soluzione;
         setTimeout(() => {
             img.hidden = false;
             document.getElementById("img").style.animation = "flip cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s forwards";
-            document.getElementById("img").src = src_soluzione;
             immagine = "soluzione";
         }, 100);
 
     } else {
         img.hidden = true;
+        document.getElementById("img").src = src_foto;  
         setTimeout(() => {
             img.hidden = false;
             document.getElementById("img").style.animation = "flip cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s forwards";
-            document.getElementById("img").src = src_foto;
             immagine = "foto";
         }, 100);
     }
