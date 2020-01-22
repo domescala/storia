@@ -46,7 +46,40 @@
     background-color: rgb(255, 240, 175);
 }
 }
-
+@-webkit-keyframes flip {
+    0% {
+        -webkit-transform: translateZ(-800px) rotateY(90deg);
+                transform: translateZ(-800px) rotateY(90deg);
+        opacity: 0;
+      }
+      25% {
+        -webkit-transform: translateZ(-160px) rotateY(87deg);
+                transform: translateZ(-160px) rotateY(87deg);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateZ(0) rotateY(0);
+                transform: translateZ(0) rotateY(0);
+      }
+    }
+  @keyframes flip {
+    0% {
+        -webkit-transform: translateZ(-800px) rotateY(90deg);
+                transform: translateZ(-800px) rotateY(90deg);
+        opacity: 0;
+      }
+      25% {
+        -webkit-transform: translateZ(-160px) rotateY(87deg);
+                transform: translateZ(-160px) rotateY(87deg);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateZ(0) rotateY(0);
+                transform: translateZ(0) rotateY(0);
+      }
+    }
+    
+  
     div.testo{
         opacity: 1;
         text-align: justify;
@@ -122,9 +155,6 @@ body{
     width: 100%;
 }
 
-img{
-    max-width: 350px;
-    max-height: 200px;}
   
  @keyframes opacity_on{
      0%{
@@ -163,6 +193,17 @@ img{
 
     }}
   
+img{
+    max-width: 350px;
+    max-height: 200px;}
+img.img2{
+    width:350px; 
+    max-width:unset;
+     max-height:unset;
+     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.256);
+     animation: opacity_on 1s ease forwards;
+
+}
 button{
     opacity: 1;
     height: 40px;
@@ -326,7 +367,7 @@ div.intestazione2{
     animation: intro_intestazione2 3s ease forwards;  
 }
 #div_corpo{
-    opacity: 0;
+    opacity: 1;
     animation: opacity_on 1s ease forwards;
 }
 
