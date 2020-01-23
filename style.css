@@ -172,12 +172,12 @@ body{
     81%{
         margin-left: 10px;
         color: rgba(255, 255, 255, 0);
-        width: 172px;
+        width: 175px;
     }
     100%{
         margin-left: 10px;
         color: rgb(255, 255, 255);
-        width: 172px;
+        width: 175px;
     }
 }   
 @keyframes opacity_on_spoiler{

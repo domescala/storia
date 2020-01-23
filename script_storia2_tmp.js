@@ -3,6 +3,8 @@ var n = 0;
 var immagine = ""; 
 var src_foto, src_soluzione = "";
 var tempo_intro = 3000;
+var larghezza_tasto_random = "175px";
+
 function FunctionRandom() {
     n = Math.floor(Math.random() * 707);
     n = n+1;
@@ -79,6 +81,6 @@ function animazione_manuale_spoiler(){
 function animazione_manuale_random(){
     setTimeout(() => {
     document.getElementById("Random").style.marginLeft = "10px";
-    document.getElementById("Random").style.width = "172px";
+    document.getElementById("Random").style.width = larghezza_tasto_random;
     }, 1100);
 }

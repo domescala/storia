@@ -9,6 +9,7 @@ var imgGrafLink = [
 ];
 var a1, a2, a3, i = 0;
 var tempo_intro = 3000;
+var larghezza_tasto_random = "175px";
 animazione_manuale_introduzione()
 function archFunction() {
     a1 = Math.floor(Math.random() * imgArchLink.length);
@@ -130,7 +131,7 @@ function animazione_manuale_random(nome_id, time){
     time = time + 100;
     setTimeout(() => {
     document.getElementById(nome_id).style.marginLeft = "10px";
-    document.getElementById(nome_id).style.width = "172px";
+    document.getElementById(nome_id).style.width = larghezza_tasto_random;
     }, time);
 }
     
