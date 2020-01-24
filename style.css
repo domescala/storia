@@ -202,7 +202,11 @@ img.img2{
      max-height:unset;
      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.256);
      animation: opacity_on 1s ease forwards;
-
+}
+img.contatore{
+    opacity: 0;
+    width: 1px;
+    height: 1px;
 }
 button{
     opacity: 1;
