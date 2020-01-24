@@ -8,11 +8,7 @@ var larghezza_tasto_random = "175px";
 function FunctionRandom() {
     n = Math.floor(Math.random() * 707);
     n = n+1;
-    // correzione immagine 509
-    if (n == 509) { 
-    n = Math.floor(Math.random() * 500);
-    n = n+1;
-}
+    
     src_foto = "storia2_tmp/Tavola disegno " + n + ".jpg";
     src_soluzione = "storia2_tmp/Tavola disegno " + n + " copia.jpg";
     img.hidden = true;    
