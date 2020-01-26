@@ -84,7 +84,7 @@ function introduzione(){
 
 function animazione_manuale_introduzione(){
         div_corpo.hidden = false;
-        document.getElementById(div_corpo).style.opacity = "1";
+        document.getElementById("div_corpo").style.opacity = "1";
 }
 
 function animazione_manuale_spoiler(){
