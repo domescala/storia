@@ -1,13 +1,16 @@
 
-var n = 0;
+var n, n2, n3= 0;
 var immagine = ""; 
 var src_foto, src_soluzione = "";
 var tempo_intro = 3000;
 var larghezza_tasto_random = "175px";
+var fronte = new Image();
+var retro = new Image();
 
 function FunctionRandom() {
     n = Math.floor(Math.random() * 707);
-    n = n+1;
+    n = n + 1;
+ 
     
     src_foto = "storia2_tmp/Tavola disegno " + n + ".jpg";
     src_soluzione = "storia2_tmp/Tavola disegno " + n + " copia.jpg";
@@ -18,13 +21,13 @@ function FunctionRandom() {
         document.getElementById("img").style.animation = "opacity_on 0.75s ease forwards";
         
     }, 100);
+    immagine = "foto";
+    
+    // solo una volta 
     document.getElementById("ButtonSpoiler").hidden = false;
     document.getElementById("Random").style.animation = "traslazione_random 1s ease forwards";
     document.getElementById( "ButtonSpoiler" ).style.animation = "opacity_on_spoiler 1s ease forwards";
-   
     setTimeout(() => {
-    
-    immagine = "foto";
     document.getElementById("Random").innerHTML = "Nuova immagine";
     }, 800);
     animazione_manuale_spoiler();
@@ -84,3 +87,5 @@ function animazione_manuale_random(){
     document.getElementById("Random").style.width = larghezza_tasto_random;
     }, 1100);
 }
+
+    
