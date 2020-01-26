@@ -116,9 +116,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+/* body {
+	 line-height: 1; 
+} */
 ol, ul {
 	list-style: none;
 }
@@ -194,21 +194,47 @@ body{
     }}
 @keyframes rainbow{
     0%{
-        border-color: rgb(253, 117, 54);
+        background-color: rgb(253, 117, 54);
     }
     33%{
-        border-color: rgb(253, 54, 54);
+        background-color: rgb(253, 54, 54);
 
     }
     66%{
-        border-color: hsl(345, 95%, 60%);
+        background-color: hsl(345, 95%, 60%);
         
     }
     100%{
-        border-color: rgb(107, 54, 253);
+        background-color: rgb(107, 54, 253);
     }
 }
-
+@keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+  
 img{
     max-width: 350px;
     max-height: 200px;}
@@ -253,6 +279,7 @@ button.random{
     z-index: 5;
     background-color: rgb(255, 57, 100);
     color: white;
+    animation: vibrate-1 0.3s linear infinite both;
     /* animation: traslazione_random 10s linear 5s; */
     
 }
@@ -263,13 +290,16 @@ button.random2{
     z-index: 5;
     background-color: rgb(30, 144, 210);
     color: white;
+    animation: vibrate-1 0.3s linear infinite both;
 }
 button.donazione{
     margin: unset;
     animation: rainbow 20s linear infinite alternate forwards;
     background-color: rgb(253, 117, 54);
     color: white;
-
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    height: auto;
 }
 div.center{
     position: relative;
@@ -431,6 +461,7 @@ p.credit{
     font-size: 14px;
     text-align: center; 
     font-family: "Montserrat-ThinItalic";
+    line-height: 20px;
 }
 p.spoiler{
     

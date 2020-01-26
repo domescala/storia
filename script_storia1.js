@@ -716,6 +716,19 @@ var imgGrafLink =["1475-Marchio-William Caxton.jpg",
 "1960-63-monogramma e logotipo per Yves Saint-Laurent-Cassandre-Art Déco.png", 
 "1962-Composizione-Victor Vasarely-Gestaltpsychologie.jpg"];
 
+var frasi_donazione = [ 
+    "Offrimi un caffè 😪",
+    "Offrimi un caffè 😉",
+    "Offrimi un caffè ☕",
+    "Offrimi un caffè 😪",
+    "Offrimi un caffè 😉",
+    "Offrimi un caffè 😉",
+    "DONA UN SOLDO AL TUO WITCHER",
+    "Kaffèèè!1!?? 👴🏻",
+    "Birretta? 🍻",
+    "Coffee me ☕",
+    "Dona il tuo 5x1000" ];
+
 var a1, a2, a3, i = 0;
 var tempo_intro = 3000;
 
@@ -844,6 +857,8 @@ function GrafFunctionSpoiler()
         setTimeout(() => { div_corpo.hidden = false; }, tempo_intro);
         
         setTimeout(() => { 
+        document.getElementById("donazione").innerHTML = frasi_donazione[Math.floor(Math.random() * frasi_donazione.length)];
+            
             document.getElementById("div_corpo").style.opacity = "1";
         }, tempo_intro + 100);
     }

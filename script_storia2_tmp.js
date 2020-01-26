@@ -1,4 +1,3 @@
-
 var flag = 0;
 var immagine = ""; 
 var src_foto, src_soluzione = "";
@@ -8,7 +7,19 @@ var i = 1;
 var n = new Array(0, 0);
 var preload_fronte = new Image();
 var preload_retro = new Image();
-    
+var frasi_donazione = [ 
+    "Offrimi un caffè 😪",
+    "Offrimi un caffè 😉",
+    "Offrimi un caffè 😉",
+    "Offrimi un caffè 😪",
+    "Offrimi un caffè 😉",
+    "Offrimi un caffè 😉",
+    "DONA UN SOLDO AL TUO WITCHER",
+    "Kaffèèè!1!?? 👴🏻",
+    "Birretta? 🍻",
+    "Coffee me ☕",
+    "Dona il tuo 5x1000" ];
+
 n[i] = Math.floor(Math.random() * 707) + 1;
 preload_fronte.src = "storia2_tmp/Tavola disegno " + n[i] + ".jpg";
 preload_retro.src = "storia2_tmp/Tavola disegno " + n[i] + " copia.jpg";
@@ -74,9 +85,9 @@ function FunctionSpoiler() {
 function introduzione(){
     div_corpo.hidden = true;
     setTimeout(() => { div_corpo.hidden = false; }, tempo_intro);
-    setTimeout(() => { 
-    
-    animazione_manuale_introduzione();
+    setTimeout(() => {   
+        document.getElementById("donazione").innerHTML = frasi_donazione[Math.floor(Math.random() * frasi_donazione.length)];
+        animazione_manuale_introduzione();
 }, tempo_intro + 100);
 
 }
@@ -99,5 +110,3 @@ function animazione_manuale_random(){
     document.getElementById("Random").style.width = larghezza_tasto_random;
     }, 1100);
 }
-
-    
