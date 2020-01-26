@@ -1,5 +1,4 @@
 
-var tempo_intro =1000;
 var a = 0;
 var i = 1;
 var nrandom = new Array(0, 0);
@@ -7,12 +6,20 @@ nrandom[i] = Math.floor(Math.random() * 707) + 1;
 var preload_fronte = new Image();
 var preload_retro = new Image();
 preload_fronte.src = "storia2_tmp/Tavola disegno " + nrandom[i] + ".jpg";
-preload_retro.src = "storia2_tmp/Tavola disegno " + nrandom[i] + ".jpg";
+preload_retro.src = "storia2_tmp/Tavola disegno " + nrandom[i] + " copia.jpg";
+var n, n2, n3= 0;
+var immagine = ""; 
+var src_foto, src_soluzione = "";
+var tempo_intro = 3000;
+var larghezza_tasto_random = "175px";
 
-function FunctionRandom(){
+function FunctionRandom() {
+    n = Math.floor(Math.random() * 707);
+    n = n + 1;
+ 
+    
     src_foto = preload_fronte.src;
     src_soluzione = preload_retro.src;
-
     img.hidden = true;    
     document.getElementById("img").src = src_foto;
     setTimeout(() => {
@@ -22,19 +29,26 @@ function FunctionRandom(){
     }, 100);
     immagine = "foto";
     
-    
-
     i = 1 - i ; // i diventa 1 se era 0 e diventa 0 se era 1
 
     nrandom[i] = Math.floor(Math.random() * 707) + 1;
     preload_fronte.src = "storia2_tmp/Tavola disegno " + nrandom[i] + ".jpg";
-    preload_retro.src = "storia2_tmp/Tavola disegno " + nrandom[i] + ".jpg";
+    preload_retro.src = "storia2_tmp/Tavola disegno " + nrandom[i] + " copia.jpg";
 
+
+    // solo una volta 
+    document.getElementById("ButtonSpoiler").hidden = false;
+    document.getElementById("Random").style.animation = "traslazione_random 1s ease forwards";
+    document.getElementById( "ButtonSpoiler" ).style.animation = "opacity_on_spoiler 1s ease forwards";
+    setTimeout(() => {
+    document.getElementById("Random").innerHTML = "Nuova immagine";
+    }, 800);
+    animazione_manuale_spoiler();
+    animazione_manuale_random();
 
 }
 
-
-function FunctionSpolier(){
+function FunctionSpoiler() {
     document.getElementById( "ButtonSpoiler" ).style.animation = "unset";
 
     if (immagine == "foto") {
@@ -57,6 +71,7 @@ function FunctionSpolier(){
     }
 
 }
+
 function introduzione(){
     div_corpo.hidden = true;
     setTimeout(() => { div_corpo.hidden = false; }, tempo_intro);
@@ -85,3 +100,5 @@ function animazione_manuale_random(){
     document.getElementById("Random").style.width = larghezza_tasto_random;
     }, 1100);
 }
+
+    
