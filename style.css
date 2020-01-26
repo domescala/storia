@@ -192,7 +192,23 @@ body{
         border: 2px rgb(37, 37, 37) solid;
 
     }}
-  
+@keyframes rainbow{
+    0%{
+        border-color: rgb(253, 117, 54);
+    }
+    33%{
+        border-color: rgb(253, 54, 54);
+
+    }
+    66%{
+        border-color: hsl(345, 95%, 60%);
+        
+    }
+    100%{
+        border-color: rgb(107, 54, 253);
+    }
+}
+
 img{
     max-width: 350px;
     max-height: 200px;}
@@ -248,7 +264,13 @@ button.random2{
     background-color: rgb(30, 144, 210);
     color: white;
 }
+button.donazione{
+    margin: unset;
+    animation: rainbow 20s linear infinite alternate forwards;
+    background-color: rgb(253, 117, 54);
+    color: white;
 
+}
 div.center{
     position: relative;
     text-align: center;
@@ -377,7 +399,7 @@ div.intestazione2{
 
 div.pie{
     background-color: rgb(43, 43, 43);
-    margin: 0px -20px 0px -10px;
+    margin: 0px -10px 0px -10px;
     padding: 10px 40px 10px 40px;
     border-top: 20px  rgb(34, 34, 34) solid;
     border-bottom: 20px   rgb(43, 43, 43) solid;
