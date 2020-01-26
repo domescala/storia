@@ -1,5 +1,5 @@
 
-
+var tempo_intro =1000;
 var a = 0;
 var i = 1;
 var nrandom = new Array(0, 0);
@@ -56,4 +56,32 @@ function FunctionSpolier(){
         }, 100);
     }
 
+}
+function introduzione(){
+    div_corpo.hidden = true;
+    setTimeout(() => { div_corpo.hidden = false; }, tempo_intro);
+    setTimeout(() => { 
+    
+    animazione_manuale_introduzione();
+}, tempo_intro + 100);
+
+}
+
+
+function animazione_manuale_introduzione(){
+        div_corpo.hidden = false;
+        document.getElementById(div_corpo).style.opacity = "1";
+}
+
+function animazione_manuale_spoiler(){
+    setTimeout(() => {
+    document.getElementById("ButtonSpoiler").style.color = "rgb(37, 37, 37)";
+    document.getElementById("ButtonSpoiler").style.border = "2px rgb(37, 37, 37) solid";
+    }, 1100);
+}
+function animazione_manuale_random(){
+    setTimeout(() => {
+    document.getElementById("Random").style.marginLeft = "10px";
+    document.getElementById("Random").style.width = larghezza_tasto_random;
+    }, 1100);
 }
