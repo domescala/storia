@@ -1,23 +1,20 @@
 
 var a = 0;
 var i = 1;
-var nrandom = new Array(0, 0);
-nrandom[i] = Math.floor(Math.random() * 707) + 1;
+var n = new Array(0, 0);
+n[i] = Math.floor(Math.random() * 707) + 1;
 var preload_fronte = new Image();
 var preload_retro = new Image();
-preload_fronte.src = "storia2_tmp/Tavola disegno " + nrandom[i] + ".jpg";
-preload_retro.src = "storia2_tmp/Tavola disegno " + nrandom[i] + " copia.jpg";
-var n, n2, n3= 0;
+preload_fronte.src = "storia2_tmp/Tavola disegno " + n[i] + ".jpg";
+preload_retro.src = "storia2_tmp/Tavola disegno " + n[i] + " copia.jpg";
+var n2, n3= 0;
 var immagine = ""; 
 var src_foto, src_soluzione = "";
 var tempo_intro = 3000;
 var larghezza_tasto_random = "175px";
 
 function FunctionRandom() {
-    n = Math.floor(Math.random() * 707);
-    n = n + 1;
- 
-    
+     
     src_foto = preload_fronte.src;
     src_soluzione = preload_retro.src;
     img.hidden = true;    
@@ -32,8 +29,8 @@ function FunctionRandom() {
     i = 1 - i ; // i diventa 1 se era 0 e diventa 0 se era 1
 
     nrandom[i] = Math.floor(Math.random() * 707) + 1;
-    preload_fronte.src = "storia2_tmp/Tavola disegno " + nrandom[i] + ".jpg";
-    preload_retro.src = "storia2_tmp/Tavola disegno " + nrandom[i] + " copia.jpg";
+    preload_fronte.src = "storia2_tmp/Tavola disegno " + n[i] + ".jpg";
+    preload_retro.src = "storia2_tmp/Tavola disegno " + n[i] + " copia.jpg";
 
 
     // solo una volta 

@@ -1,19 +1,23 @@
 
-var n, n2, n3= 0;
+var flag = 0;
 var immagine = ""; 
 var src_foto, src_soluzione = "";
 var tempo_intro = 3000;
 var larghezza_tasto_random = "175px";
-var fronte = new Image();
-var retro = new Image();
+var i = 1;
+var n = new Array(0, 0);
+var preload_fronte = new Image();
+var preload_retro = new Image();
+    
+n[i] = Math.floor(Math.random() * 707) + 1;
+preload_fronte.src = "storia2_tmp/Tavola disegno " + n[i] + ".jpg";
+preload_retro.src = "storia2_tmp/Tavola disegno " + n[i] + " copia.jpg";
 
 function FunctionRandom() {
-    n = Math.floor(Math.random() * 707);
-    n = n + 1;
- 
     
-    src_foto = "storia2_tmp/Tavola disegno " + n + ".jpg";
-    src_soluzione = "storia2_tmp/Tavola disegno " + n + " copia.jpg";
+    src_foto = preload_fronte.src;
+    src_soluzione = preload_retro.src;
+
     img.hidden = true;    
     document.getElementById("img").src = src_foto;
     setTimeout(() => {
@@ -23,7 +27,14 @@ function FunctionRandom() {
     }, 100);
     immagine = "foto";
     
+    i = 1 - i ; // i diventa 1 se era 0 e diventa 0 se era 1
+
+    n[i] = Math.floor(Math.random() * 707) + 1;
+    preload_fronte.src = "storia2_tmp/Tavola disegno " + n[i] + ".jpg";
+    preload_retro.src = "storia2_tmp/Tavola disegno " + n[i] + " copia.jpg";
+
     // solo una volta 
+    if (flag == 0){
     document.getElementById("ButtonSpoiler").hidden = false;
     document.getElementById("Random").style.animation = "traslazione_random 1s ease forwards";
     document.getElementById( "ButtonSpoiler" ).style.animation = "opacity_on_spoiler 1s ease forwards";
@@ -32,7 +43,8 @@ function FunctionRandom() {
     }, 800);
     animazione_manuale_spoiler();
     animazione_manuale_random();
-
+    flag = 10;    
+}
 }
 
 function FunctionSpoiler() {
