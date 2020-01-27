@@ -744,6 +744,11 @@ function archFunction()
         var random_button = materia+"Random";
         var spoiler_text = "spoiler"+materia ;
         
+        // vibrazione tasto random
+        document.getElementById(random_button).style.animation = "none";  
+        setTimeout(() => {
+            document.getElementById(random_button).style.animation = "vibrate-1 0.3s linear 30s infinite";
+        }, 1100);
         
         a1 = Math.floor(Math.random() * imgArchLink.length);
         document.getElementById(img).src = img_link + imgArchLink[a1];
@@ -785,7 +790,12 @@ function archFunctionSpoiler()
         var random_button = materia+"Random";
         var spoiler_text = "spoiler"+materia ;
         
-        
+        // vibrazione tasto random
+        document.getElementById(random_button).style.animation = "none";  
+        setTimeout(() => {
+             document.getElementById(random_button).style.animation = "vibrate-1 0.3s linear 30s infinite";
+        }, 1100);
+                
         a2 = Math.floor(Math.random() * imgDesLink.length);
         document.getElementById(img).src = img_link + imgDesLink[a2];
         document.getElementById( spoiler_button ).style.animation = "opacity_on_spoiler 1s ease forwards";
@@ -825,7 +835,12 @@ function GrafFunction()
         var random_button = materia+"Random";
         var spoiler_text = "spoiler"+materia ;
         
-        
+        // vibrazione tasto random
+        document.getElementById(random_button).style.animation = "none";  
+        setTimeout(() => {
+             document.getElementById(random_button).style.animation = "vibrate-1 0.3s linear 30s infinite";
+        }, 1100);
+                
         a3 = Math.floor(Math.random() * imgGrafLink.length);
         document.getElementById(img).src = img_link + imgGrafLink[a3];
         document.getElementById( spoiler_button ).style.animation = "opacity_on_spoiler 1s ease forwards";
@@ -858,8 +873,9 @@ function GrafFunctionSpoiler()
         
         setTimeout(() => { 
         document.getElementById("donazione").innerHTML = frasi_donazione[Math.floor(Math.random() * frasi_donazione.length)];
+        document.getElementById("intestazione1").style.animation = "rainbow_intestazione1 5s infinite 1s alternate";
             
-            document.getElementById("div_corpo").style.opacity = "1";
+        document.getElementById("div_corpo").style.opacity = "1";
         }, tempo_intro + 100);
     }
 
@@ -879,10 +895,4 @@ function GrafFunctionSpoiler()
         }, time);
     }
         
-        function animazione_manuale_introduzione(){
-            setTimeout(() => { 
-                div_corpo.hidden = false; 
-                document.getElementById(div_corpo).style.opacity = "1";
-
-            }, tempo_intro);
-        }
+  

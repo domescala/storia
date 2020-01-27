@@ -48,15 +48,23 @@
 }
 @-webkit-keyframes flip {
     0% {
+        -webkit-transform: translateZ(0) rotateY(0);
+                transform: translateZ(0) rotateY(0);
+
+        /* opacity: 1; */
+      }
+      /* 42.5% { */
+        /* -webkit-transform: translateZ(-160px) rotateY(87deg); */
+                /* transform: translateZ(-160px) rotateY(87deg); */
+      /* } */
+      30% {
         -webkit-transform: translateZ(-800px) rotateY(90deg);
                 transform: translateZ(-800px) rotateY(90deg);
-        opacity: 0;
       }
-      25% {
-        -webkit-transform: translateZ(-160px) rotateY(87deg);
-                transform: translateZ(-160px) rotateY(87deg);
-        opacity: 1;
-      }
+      /* 92.5% { */
+        /* -webkit-transform: translateZ(-160px) rotateY(87deg); */
+                /* transform: translateZ(-160px) rotateY(87deg); */
+      /* } */
       100% {
         -webkit-transform: translateZ(0) rotateY(0);
                 transform: translateZ(0) rotateY(0);
@@ -64,21 +72,22 @@
     }
   @keyframes flip {
     0% {
-        -webkit-transform: translateZ(-800px) rotateY(90deg);
-                transform: translateZ(-800px) rotateY(90deg);
-        opacity: 0;
-      }
-      25% {
-        -webkit-transform: translateZ(-160px) rotateY(87deg);
-                transform: translateZ(-160px) rotateY(87deg);
-        opacity: 1;
-      }
-      100% {
         -webkit-transform: translateZ(0) rotateY(0);
                 transform: translateZ(0) rotateY(0);
       }
+      /* 42.5% { */
+        /* -webkit-transform: translateZ(-160px) rotateY(87deg); */
+                /* transform: translateZ(-160px) rotateY(87deg); */
+      /* } */
+      30% {
+        -webkit-transform: translateZ(-800px) rotateY(90deg);
+                transform: translateZ(-800px) rotateY(90deg);
+      }
+      100% { 
+        -webkit-transform: translateZ(0px) rotateY(0deg);
+                transform: translateZ(0px) rotateY(0deg);
     }
-    
+}
   
     div.testo{
         opacity: 1;
@@ -281,7 +290,6 @@ button.random{
     color: white;
     animation: vibrate-1 0.3s linear infinite both;
     /* animation: traslazione_random 10s linear 5s; */
-    
 }
 button.random2{
     z-index: 20;
@@ -391,6 +399,27 @@ div.line{
         position: unset;
 
     }
+}
+@keyframes rainbow_intestazione2{
+    0%{
+
+    }
+    100%{
+        background-color: rgb(88, 147, 224);
+        border-bottom: 20px  rgb(74, 128, 189) solid;
+
+    }
+    
+}@keyframes rainbow_intestazione1{
+    0%{
+
+    }
+    100%{
+        background-color: rgb(255, 71, 80);
+        border-bottom: 20px  rgb(223, 74, 74) solid;
+
+    }
+    
 }
 p{
     line-height: 18px;

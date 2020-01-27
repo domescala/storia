@@ -1,4 +1,4 @@
-var flag = 0;
+var flag = 1;
 var immagine = ""; 
 var src_foto, src_soluzione = "";
 var tempo_intro = 3000;
@@ -44,8 +44,13 @@ function FunctionRandom() {
     preload_fronte.src = "storia2_tmp/Tavola disegno " + n[i] + ".jpg";
     preload_retro.src = "storia2_tmp/Tavola disegno " + n[i] + " copia.jpg";
 
+    document.getElementById("Random").style.animation = "none";  
+    setTimeout(() => {
+        document.getElementById("Random").style.animation = "vibrate-1 0.3s linear 30s infinite";
+        }, 1100);
+    
     // solo una volta 
-    if (flag == 0){
+    if (flag == 1){
     document.getElementById("ButtonSpoiler").hidden = false;
     document.getElementById("Random").style.animation = "traslazione_random 1s ease forwards";
     document.getElementById( "ButtonSpoiler" ).style.animation = "opacity_on_spoiler 1s ease forwards";
@@ -54,31 +59,42 @@ function FunctionRandom() {
     }, 800);
     animazione_manuale_spoiler();
     animazione_manuale_random();
-    flag = 10;    
+    flag = 0;   
+    
 }
+
 }
 
 function FunctionSpoiler() {
-    document.getElementById( "ButtonSpoiler" ).style.animation = "unset";
+    // img.hidden = true;
+    // setTimeout(() => {
+        document.getElementById("img").style.animation = "flip linear 0.5s forwards";
+        // img.hidden = false;
+    // }, 12);
 
     if (immagine == "foto") {
-        img.hidden = true;
-        document.getElementById("img").src = src_soluzione;
+        
+        
         setTimeout(() => {
-            img.hidden = false;
-            document.getElementById("img").style.animation = "flip cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s forwards";
+            document.getElementById("img").src = src_soluzione;
             immagine = "soluzione";
-        }, 100);
-
-    } else {
-        img.hidden = true;
-        document.getElementById("img").src = src_foto;  
+            
+        }, 150);
+        document.getElementById("ButtonSpoiler").style.color = "rgb(255, 255, 255)";
+        document.getElementById("ButtonSpoiler").style.backgroundColor = "rgb(37, 37, 37)";
+    } 
+    else {
         setTimeout(() => {
-            img.hidden = false;
-            document.getElementById("img").style.animation = "flip cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s forwards";
+            document.getElementById("img").src = src_foto;  
             immagine = "foto";
-        }, 100);
+
+        }, 150);
+        document.getElementById("ButtonSpoiler").style.color = "rgb(37, 37, 37)";
+        document.getElementById("ButtonSpoiler").style.backgroundColor = "rgba(37, 37, 37, 0)";
     }
+    setTimeout(() => {
+        document.getElementById("img").style.animation = "initial";
+    }, 501);
 
 }
 
@@ -96,12 +112,16 @@ function introduzione(){
 function animazione_manuale_introduzione(){
         div_corpo.hidden = false;
         document.getElementById("div_corpo").style.opacity = "1";
+        document.getElementById("intestazione2").style.animation = "rainbow_intestazione2 5s infinite 1s alternate";
+
 }
 
 function animazione_manuale_spoiler(){
     setTimeout(() => {
     document.getElementById("ButtonSpoiler").style.color = "rgb(37, 37, 37)";
     document.getElementById("ButtonSpoiler").style.border = "2px rgb(37, 37, 37) solid";
+    document.getElementById("ButtonSpoiler").style.animation = "none";
+
     }, 1100);
 }
 function animazione_manuale_random(){
