@@ -19,8 +19,11 @@ var frasi_donazione = [
     "Birretta? 🍻",
     "Coffee me ☕",
     "Dona il tuo 5x1000" ];
+var estratti = new Set();
+estratti.add(0);
+console.log(estrai());
 
-n[i] = Math.floor(Math.random() * 707) + 1;
+n[i] = estrai();
 preload_fronte.src = "storia2_tmp/Tavola disegno " + n[i] + ".jpg";
 preload_retro.src = "storia2_tmp/Tavola disegno " + n[i] + " copia.jpg";
 
@@ -40,7 +43,7 @@ function FunctionRandom() {
     
     i = 1 - i ; // i diventa 1 se era 0 e diventa 0 se era 1
 
-    n[i] = Math.floor(Math.random() * 707) + 1;
+    n[i] = estrai();
     preload_fronte.src = "storia2_tmp/Tavola disegno " + n[i] + ".jpg";
     preload_retro.src = "storia2_tmp/Tavola disegno " + n[i] + " copia.jpg";
 
@@ -132,4 +135,18 @@ function animazione_manuale_random(){
 }
 function formgoogle(){
     document.getElementById("formgoogle").hidden= false;
+}
+
+function estrai(){
+    var a = 0;
+
+    while(estratti.has(a)){  // finche non è in lista continua a generare
+
+        a = Math.floor(Math.random() * 707) + 1;
+
+        console.log(" "+ a + " è gia uscito?  " + estratti.has(a));
+    }
+    estratti.add(a);
+
+    return a;
 }
