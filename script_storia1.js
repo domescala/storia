@@ -730,6 +730,10 @@ var frasi_donazione = [
     "Dona il tuo 5x1000" ];
 
 var a1, a2, a3, i = 0;
+var estratti1 = new Set();
+var estratti2 = new Set();
+var estratti3 = new Set();
+
 var tempo_intro = 3000;
 
 introduzione();
@@ -751,6 +755,18 @@ function archFunction()
         }, 1100);
         
         a1 = Math.floor(Math.random() * imgArchLink.length);
+        while(estratti1.has(a1) && estratti1.size < imgArchLink.length){
+            console.log(a1 + " è gia uscito ");
+            a1 = Math.floor(Math.random() * imgArchLink.length);   
+        }
+        estratti1.add(a1);
+       
+        if (estratti1.size == imgArchLink.length) {
+            estratti1.clear();
+            console.log("pulito");
+            
+        }
+
         document.getElementById(img).src = img_link + imgArchLink[a1];
         document.getElementById( spoiler_button ).style.animation = "opacity_on_spoiler 1s ease forwards";
         
@@ -797,6 +813,18 @@ function archFunctionSpoiler()
         }, 1100);
                 
         a2 = Math.floor(Math.random() * imgDesLink.length);
+        while(estratti2.has(a2) && estratti2.size < imgDesLink.length){
+            console.log(a2 + " è gia uscito ");
+            a2 = Math.floor(Math.random() * imgDesLink.length);   
+        }
+        estratti2.add(a2);
+       
+        if (estratti2.size == imgDesLink.length) {
+            estratti2.clear();
+            console.log("pulito");
+            
+        }
+
         document.getElementById(img).src = img_link + imgDesLink[a2];
         document.getElementById( spoiler_button ).style.animation = "opacity_on_spoiler 1s ease forwards";
         
@@ -842,6 +870,18 @@ function GrafFunction()
         }, 1100);
                 
         a3 = Math.floor(Math.random() * imgGrafLink.length);
+        while(estratti3.has(a3) && estratti3.size < imgGrafLink.length){
+            console.log(a3 + " è gia uscito ");
+            a3 = Math.floor(Math.random() * imgGrafLink.length);   
+        }
+        estratti3.add(a3);
+       
+        if (estratti3.size == imgGrafLink.length) {
+            estratti3.clear();
+            console.log("pulito");
+            
+        }
+
         document.getElementById(img).src = img_link + imgGrafLink[a3];
         document.getElementById( spoiler_button ).style.animation = "opacity_on_spoiler 1s ease forwards";
         
@@ -868,7 +908,7 @@ function GrafFunctionSpoiler()
     }  
 
     function introduzione(){
-        document.getElementById("div_corpo").hidden = true;
+        // document.getElementById("div_corpo").hidden = true;
         setTimeout(() => { div_corpo.hidden = false; }, tempo_intro);
         
         setTimeout(() => { 
