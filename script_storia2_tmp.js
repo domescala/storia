@@ -21,7 +21,7 @@ var frasi_donazione = [
     "Dona il tuo 5x1000" ];
 var estratti = new Set();
 estratti.add(0);
-console.log(estrai());
+// console.log(estrai());
 
 n[i] = estrai();
 preload_fronte.src = "storia2_tmp/Tavola disegno " + n[i] + ".jpg";
@@ -140,13 +140,17 @@ function formgoogle(){
 function estrai(){
     var a = 0;
 
-    while(estratti.has(a)){  // finche non è in lista continua a generare
+    while(estratti.has(a) && estratti.size < 708){  // finche non è in lista continua a generare
 
         a = Math.floor(Math.random() * 707) + 1;
 
-        console.log(" "+ a + " è gia uscito?  " + estratti.has(a));
+        // console.log(" "+ a + " è gia uscito?  " + estratti.has(a)); 
     }
     estratti.add(a);
 
+    if(estratti.size == 707){
+        estratti.clear();
+        // console.log("pulito");
+    }
     return a;
 }
