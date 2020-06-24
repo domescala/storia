@@ -130,3 +130,6 @@ function animazione_manuale_random(){
     document.getElementById("Random").style.width = larghezza_tasto_random;
     }, 1100);
 }
+function formgoogle(){
+    document.getElementById("formgoogle").hidden= false;
+}
