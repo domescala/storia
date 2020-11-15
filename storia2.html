@@ -218,7 +218,6 @@
 
 </body> -->
 <body onload="introduzione()">
-
     <div id="intestazione2" class="intestazione2">
         <p class="titolo">Generatore casuale di immagini per Storia 2</p>
     </div>
@@ -228,10 +227,13 @@
         <br>
         
         <div class="testo" > 
-            <p >Ho fixato il bug sulla frequenza delle immagini, ora quelle già estratte non si ripeteranno. </p> <br>
-                <p style="font-size:12px; ">  <i> Domenico </i></p>
+            <p >Ho aggiunto un tasto per abilitare le ripetizioni delle immagini a piacimento, buono studio! </p> <br>
+                <br><p style="font-size:15px; ">  <i style="color: rgb(177 177 177);font-family: 'Montserrat-LightItalic'; ">- Domenico </i></p>
             </div>
         <br>
+        <input type="checkbox" style="width: 20px; height: 20px;" id="CheckRip" onclick="FunctionRip()">
+            <span id="textRip" style="display: inline"> Consenti ripetizioni</span>
+        <br><br>
         <div style="height:352px; padding-top:5px">
             <img class="img2" id="img">
         </div>
@@ -254,7 +256,7 @@
             <br><br>
             <div class="line" style="border-bottom: 1px rgb(255, 255, 255) solid; margin: 15px"></div>
             <p class="credit">
-                Questa pagina è stata sviluppata da Domenico Scaletta per un uso puramente didattico
+                Questa pagina è stata sviluppata da Domenico Scaletta per scopi puramente didattici
             </p>    
         </div>
     </div>

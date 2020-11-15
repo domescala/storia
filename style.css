@@ -11,9 +11,14 @@
     src: url("font/montserrat/Montserrat-Medium.otf") format("OpenType");
 }
 @font-face{
-    font-family: "Montserrat-ThinItalic";
-    src: url("font/montserrat/Montserrat-ThinItalic.otf") format("OpenType");
+    font-family: "Montserrat-Bold";
+    src: url("font/montserrat/Montserrat-Bold.otf") format("OpenType");
 }
+@font-face{
+    font-family: "Montserrat-LightItalic";
+    src: url("font/montserrat/Montserrat-LightItalic.otf") format("OpenType");
+}
+
 
 
 /* animazione soluzione*/
@@ -91,14 +96,14 @@
   
     div.testo{
         opacity: 1;
-        text-align: justify;
+        text-align: left;
         font-size: 15px;
-        color: rgb(70, 70, 70);
-        background-color: rgb(255, 239, 188);
+        color: rgb(27, 27, 27);
+        background-color: rgb(255, 255, 255);
         margin: 5%;
-        padding: 10px 10px 10px 10px;
+        padding: 20px 20px 20px 20px;
         border-radius: 5px;
-        border-left: 5px   rgb(253, 217, 97) solid;
+        border-left: 8px    rgb(250, 56, 105) solid;
         box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.171);
     }
 
@@ -422,7 +427,7 @@ div.line{
     
 }
 p{
-    line-height: 18px;
+    line-height: 21px;
 }
 p.titolo{
     line-height: unset;
@@ -489,7 +494,7 @@ p.credit{
     color: rgb(255, 255, 255);
     font-size: 14px;
     text-align: center; 
-    font-family: "Montserrat-ThinItalic";
+    font-family: "Montserrat-LightItalic";
     line-height: 20px;
 }
 p.spoiler{

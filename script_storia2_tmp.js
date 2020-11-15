@@ -1,4 +1,5 @@
 var flag = 1;
+var rip = true;
 var immagine = ""; 
 var src_foto, src_soluzione = "";
 var tempo_intro = 3000;
@@ -135,15 +136,32 @@ function animazione_manuale_random(){
 function formgoogle(){
     document.getElementById("formgoogle").hidden= false;
 }
+function FunctionRip() {
+    rip = !rip;
+    
+}
+
+
 
 function estrai(){
     var a = 0;
 
-    while(estratti.has(a) && estratti.size < 708){  // finche non è in lista continua a generare
+    a = Math.floor(Math.random() * 707) + 1;
+
+    if (!rip) {
+        // console.log("ripetizioni on");
+    return a;
+        
+    }
+
+    // console.log("ripetizioni off");
+
+
+    while(estratti.has(a) && estratti.size < 708){  // finche non è in lista continua a generare O salta se è spenta la ripetizione
 
         a = Math.floor(Math.random() * 707) + 1;
 
-        // console.log(" "+ a + " è gia uscito?  " + estratti.has(a)); 
+        // console.log("ripetizioni off");
     }
     estratti.add(a);
 
